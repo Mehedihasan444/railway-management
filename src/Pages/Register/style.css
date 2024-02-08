@@ -1,0 +1,5 @@
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) ;
+    /* color: rgb(0, 255, 132)!important; */
+  }

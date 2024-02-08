@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
+
 const Navbar = () => {
     const [open, close] =useState(false);
   const links = [
@@ -12,7 +13,7 @@ const Navbar = () => {
       <a href="/login">Login</a>
     </li>,
     <li key="register">
-      <a href="/registration">Register</a>
+      <a href="/register">Register</a>
     </li>,
     <li key="Informaion">
       <a href="/informaion">Train Information</a>
