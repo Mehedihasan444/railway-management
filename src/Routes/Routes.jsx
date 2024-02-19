@@ -4,6 +4,7 @@ import App from '../App';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import Trains from '../Pages/Trains';
 
 const Routes  = createBrowserRouter([
         {
@@ -12,8 +13,12 @@ const Routes  = createBrowserRouter([
           children: [
             {
               path: "/",
-              element: <Home/>
-            }]
+              element: <Home/>,
+            },
+          {
+            path: "/trains/:from/:to",
+            element: <Trains/>,
+          }]
         },
         {
           path: "/login",

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="content-type" content="text/html" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bangladesh Railway E-Ticketing Service</title>
+        <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
+        <meta
+            name="keywords"
+            content="Online train ticket booking, Buy train tickets, Train ticket booking, Railway ticket, bd railway, online train ticket, bangladesh railway ticket, bd train ticket, railway ticket booking, e ticket railway, e ticket train, bd railway ticket, bangladesh railway online ticket, bd train ticket"
+        />
+        <meta name="description" content="Buy rail tickets online in three easy steps: search, select and pay. The tickets are issued by Bangladesh Railway’s CCSRTS." />
+        <meta name="author" content="Bangladesh Railway" />
+        <meta content="follow, index, all" name="robots" />
+        <style>
+            header,
+            nav {
+                display: block;
+            }
+            a {
+                background: transparent;
+            }
+            a:active,
+            a:hover {
+                outline: 0;
+            }
+            img {
+                border: 0;
+            }
+            input {
+                margin: 0;
+                font: inherit;
+                color: inherit;
+            }
+            input::-moz-focus-inner {
+                padding: 0;
+                border: 0;
+            }
+            input {
+                line-height: normal;
+            }
+            * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            *:before,
+            *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            input {
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
+            }
+            a {
+                color: #428bca;
+                text-decoration: none;
+            }
+            a:hover,
+            a:focus {
+                color: #2a6496;
+                text-decoration: underline;
+            }
+            a:focus {
+                outline: thin dotted;
+                outline: 5px auto -webkit-focus-ring-color;
+                outline-offset: -2px;
+            }
+            img {
+                vertical-align: middle;
+            }
+            ul {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            .clearfix:before,
+            .clearfix:after {
+                display: table;
+                content: " ";
+            }
+            .clearfix:after {
+                clear: both;
+            }
+            footer {
+                display: block;
+            }
+            img {
+                border: 0;
+            }
+            * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            *:before,
+            *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            img {
+                vertical-align: middle;
+            }
+            p {
+                margin: 0 0 10px;
+            }
+            a {
+                color: #079d49;
+                outline: none;
+                border: none;
+            }
+            a:focus {
+                outline: none;
+                border: none;
+            }
+            .main-header {
+                padding: 25px 0 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+                position: relative;
+                z-index: 99;
+            }
+            .site-logo,
+            .main-navigation {
+                float: left;
+            }
+            .main-navigation {
+                text-align: center;
+                margin-left: 80px;
+            }
+            .main-navigation ul li {
+                display: inline-block;
+            }
+            .main-navigation ul li a {
+                color: black;
+                font-size: 15px;
+                padding: 6px 25px;
+                display: block;
+                transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            .main-navigation ul li a:hover {
+                text-decoration: none;
+                background: #fff;
+                border-radius: 5px;
+                color: #ffffff;
+            }
+            .main-header .site-logo a img {
+                height: 60px !important;
+                margin-top: -10px;
+                margin-bottom: -10px;
+            }
+            .main-navigation ul li a:hover {
+                text-decoration: none;
+                background: #089d49;
+                border-radius: 5px;
+                color: #ffffff;
+            }
+            .main-navigation ul li a {
+                color: #333333;
+                font-size: 15px;
+                padding: 10px 25px;
+                display: block;
+                transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            .container-wrapper {
+                max-width: 1150px;
+                margin: 0 auto;
+            }
+            header {
+                top: 0;
+            }
+            @media only screen and (min-width: 992px) {
+                nav.main-navigation ul {
+                    margin-left: 0 !important;
+                    padding-left: 0;
+                }
+            }
+            @media only screen and (max-width: 992px) {
+                .site-logo,
+                .main-navigation {
+                    float: left;
+                    padding-left: 15px;
+                }
+                .main-header .main-navigation {
+                    display: none !important;
+                }
+            }
+            header {
+                background: url(https://eticket.railway.gov.bd/img/body_bg.jpg) repeat-x;
+                position: fixed;
+                z-index: 999;
+                right: 0;
+                left: 0;
+                background: white;
+            }
+            ul li:last-child {
+                border-bottom: none;
+            }
+            footer {
+                width: 100%;
+                height: auto;
+                float: left;
+                padding: 20px 0px 10px 0px;
+                margin: 0px;
+                border-top: 3px solid #079d49;
+                font-size: 12px;
+            }
+            @media (max-width: 480px) {
+                .footer {
+                    padding: 50px 15px !important;
+                }
+            }
+            .main-navigation ul li a:hover {
+                background: inherit !important;
+                color: #0f2444 !important;
+                border-bottom: 2px solid #0f2444 !important;
+                border-radius: 0 !important;
+            }
+            .main-navigation ul li a:focus,
+            .main-navigation ul li a:active {
+                text-decoration: none;
+            }
+            .main-navigation {
+                margin-right: 0;
+                float: right;
+                margin-top: 8px;
+            }
+            .site-logo .header-logo {
+                display: flex;
+                align-items: center;
+                color: #da924e;
+                font-weight: 700;
+                font-size: 20px;
+                text-decoration: none;
+            }
+            .site-logo .header-logo .header-logo-img {
+                margin-right: 10px;
+            }
+            .site-logo .header-logo-text {
+                align-items: center;
+                color: #da924e;
+                font-weight: 700;
+                font-size: 20px;
+            }
+            .main-header {
+                padding: 15px 0 10px;
+            }
+            @media screen and (max-width: 767px) {
+                header.new-header .site-wrapper {
+                    padding-left: 0;
+                }
+            }
+            .main-navigation ul li a {
+                padding: 6px 15px;
+            }
+            section {
+                display: block;
+            }
+            @media print {
+                * {
+                    color: #000 !important;
+                    text-shadow: none !important;
+                    background: transparent !important;
+                    box-shadow: none !important;
+                }
+            }
+            * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            *:before,
+            *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            .container {
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            @media (min-width: 768px) {
+                .container {
+                    width: 750px;
+                }
+            }
+            @media (min-width: 992px) {
+                .container {
+                    width: 970px;
+                }
+            }
+            @media (min-width: 1200px) {
+                .container {
+                    width: 1170px;
+                }
+            }
+            .row {
+                margin-right: -15px;
+                margin-left: -15px;
+            }
+            .col-md-5,
+            .col-md-7 {
+                position: relative;
+                min-height: 1px;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            @media (min-width: 992px) {
+                .col-md-5,
+                .col-md-7 {
+                    float: left;
+                }
+                .col-md-7 {
+                    width: 58.333333333333336%;
+                }
+                .col-md-5 {
+                    width: 41.66666666666667%;
+                }
+            }
+            .container:before,
+            .container:after,
+            .row:before,
+            .row:after {
+                display: table;
+                content: " ";
+            }
+            .container:after,
+            .row:after {
+                clear: both;
+            }
+            #main_wrapper {
+                height: calc(100vh - 127px);
+            }
+            @media only screen and (min-width: 992px) {
+                #content {
+                    height: auto;
+                    margin-top: 65px;
+                }
+            }
+            #content {
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+            @media (min-width: 1200px) {
+                .container {
+                    width: 970px;
+                }
+            }
+            @media (min-width: 1200px) {
+                .container {
+                    width: 1150px;
+                }
+            }
+            #content {
+                margin-top: 0;
+            }
+            #content article .btn-shohoz {
+                width: 183px;
+                height: 46px;
+                display: block;
+                background: #006747;
+                border-radius: 4px;
+                font-family: "Arial";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                text-align: center;
+                color: #ffffff;
+                line-height: 46px;
+                padding: 0;
+            }
+            #content article p {
+                font-family: "Arial";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 153%;
+                color: #0f2444;
+                margin: 0 auto;
+            }
+            #content article h2 {
+                font-family: "Arial";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 55px;
+                text-transform: uppercase;
+                color: #da924e;
+                max-width: 494px;
+                text-align: center !important;
+                margin: 0 auto 60px;
+            }
+            .footer {
+                background: #f6f9ff;
+                padding: 0 50px;
+                height: 119px;
+                width: 100%;
+                overflow: hidden;
+                visibility: hidden;
+            }
+            .railway-footer-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                max-width: 1150px;
+                margin: 0 auto;
+            }
+            .footer .railway-logo {
+                display: flex;
+            }
+            .footer .railway-logo .railway-logo-img {
+                margin-right: 10px;
+            }
+            .footer .railway-logo .railway-logo-img img {
+                width: 55px;
+            }
+            .footer .railway-logo-text .railway-text {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 29px;
+                text-align: center;
+                color: #da924e;
+                font-family: "Roboto", sans-serif;
+            }
+            .footer .railway-logo-text .bangla-text {
+                font-size: 13px;
+                line-height: 15px;
+                text-align: center;
+                color: #006747;
+                font-weight: 400;
+                padding-top: 8px;
+            }
+            .footer .powered-by {
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 23px;
+                color: #000000;
+            }
+            .footer p {
+                margin: 0;
+                padding: 0;
+            }
+            .powered-company {
+                font-size: 22px;
+                font-weight: bold;
+                color: #006747;
+            }
+            @media (max-width: 991px) {
+                #content article p {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                #content article {
+                    margin-bottom: 50px;
+                }
+                #content article h2 {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                #content {
+                    display: block;
+                }
+                #main_wrapper {
+                    width: 100%;
+                    margin-top: 150px;
+                }
+                .footer {
+                    height: auto;
+                    padding: 50px;
+                }
+                .railway-footer-wrapper {
+                    flex-direction: column;
+                }
+                .footer .railway-logo {
+                    margin-bottom: 30px;
+                }
+                .footer .railway-logo-text .bangla-text,
+                .footer .railway-logo-text .railway-text {
+                    text-align: left;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="new-header">
+            <div class="main-header">
+                <!-- Header Start Here -->
+                <div class="container-wrapper">
+                    <div class="site-wrapper clearfix">
+                        <div class="site-logo">
+                            <a title="Bangladesh Railway" href="" class="header-logo">
+                                <div class="header-logo-img">
+                                    <img src="https://train-promotion-bucket.s3.ap-southeast-1.amazonaws.com/static/bangladesh-railway.png" width="60" alt="Bangladesh Railway Logo" />
+                                </div>
+                                <div class="header-logo-text">
+                                    Bangladesh <br />
+                                    Railway
+                                </div>
+                            </a>
+                        </div>
+                        <nav class="main-navigation" style="display: block;"></nav>
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="main_wrapper">
+            <section id="content" class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <article class="text-center">
+                            <h2>Please stay tuned!</h2>
+                            <p>Bangladesh Railway ticketing service through eticket website is currently unavailable due to system maintenance and up-gradation, it will be available after 02:00 am. Inconvenience is regretted.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer" style="visibility: visible;">
+            <div class="railway-footer-wrapper">
+                <div class="railway-logo">
+                    <div class="railway-logo-img">
+                        <img src="https://train-promotion-bucket.s3.ap-southeast-1.amazonaws.com/static/bangladesh-railway.png" width="60" alt="Bangladesh Railway Logo" />
+                    </div>
+                    <div class="railway-logo-text">
+                        <p class="railway-text">Bangladesh Railway</p>
+                        <p class="bangla-text">নিরাপদ . আরামদায়ক . সাশ্রয়ী</p>
+                    </div>
+                </div>
+                <div class="powered-by">
+                    <p>Powered by</p>
+                    <div class="powered-company">
+                        Shohoz-Synesis-Vincen JV
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End Here -->
+    </body>
+</html>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Form from "./Form";
-
+// import image from "../../assets/train.svg"
 const image = "https://eticket.railway.gov.bd/assets/img/login-page-bg.svg";
 const Login = () => {
   const [data,setData]=useState({})
